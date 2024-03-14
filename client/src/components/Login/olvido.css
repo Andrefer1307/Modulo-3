@@ -1,0 +1,218 @@
+/*Colores y estilos*/
+:root{
+    --colorRed: #db1b08;
+    --colorYelow: #fbf39d;
+    --colorBlue: #080f6e;
+    --inputColor: hsl(330, 12%, 97%);
+    --textColor: hsl(240, 1%, 48%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --bgColor: hsl(220, 10%, 94%);
+    --greyText: hsl(330, 12%, 97%);
+
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.5rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: .938rem;
+    --smallFontSize: .813rem;
+    --smallestFontSize: .75rem;
+}
+
+.mainContent{
+    width: 98%;
+    height: 100%;
+    padding: 2rem;
+    overflow: auto;
+
+    .bloque{
+        background: white;
+        border-radius: 20px;
+        margin: 200px auto;
+        width: 50%;
+        padding: 100px;
+
+        h1 {
+            font-size: var(--biggestFontSize);
+            text-align: center; /* Centrado horizontal */
+            display: flex;
+            justify-content: center; /* Centrado vertical */
+            align-items: center; /* Centrado vertical */
+            margin: 20px auto;
+            text-align: left;
+        }
+
+        h3{
+            margin-top: 20px auto;
+            font-size: var(--h1FontSize);
+            display: flex;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .adminDiv {
+            .icon {
+                top: 100px; 
+                right: 150px; 
+                font-size: 50px; 
+                color: var(--colorBlue); 
+                transition: color 0.3s ease; 
+          
+                &:hover {
+                    color: var(--colorRed); 
+                }
+            }
+        }  
+    }
+    .inputDiv{
+        width: 100%;
+        .icon{
+            color:var(--greyText);
+        }
+
+        input{
+            background: none;
+            outline: none;
+            border: none;
+            width: 50px;
+        }
+
+        label{
+            color: var(--blackColor);
+            font-weight: 400;
+            font-size: 18px;
+            padding: .5rem 0;
+            display: flex;
+            text-align: left;
+        }
+        select{
+            background: var(--inputColor);
+            outline: none;
+            border: none;
+            padding: 1rem;
+            border-radius: 14px;
+            border: 2px solid #ccc;
+            transition: border-color 0.3s ease;
+        }
+
+        .input{
+            width: 100%;
+            gap: .5rem;
+            padding: 1rem;
+            background: var(--inputColor);
+            border-radius: 14px;
+            border: 2px solid #ccc;
+        }
+
+        .casilla{
+            display: flex;
+        }
+
+        .btn {
+            margin-top: 20px auto;
+            padding: 1rem 2rem; /* Ajusta el espaciado interno del botón */
+            background: var(--colorBlue);
+            border-radius: 10px;
+            color: var(--whiteColor);
+            font-size: 18px; /* Ajusta el tamaño del texto */
+            border: none; /* Quita el borde */
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+            transition: all 0.3s ease; /* Añade una transición suave */
+            margin-top: 40px;
+            
+            &:hover {
+                background: var(--colorRed);
+                transform: translateY(-2px);
+                box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra al hacer hover */
+            }
+        
+            .icon {
+                font-size: 24px; /* Ajusta el tamaño del icono */
+                margin-right: 0.5rem; /* Agrega espacio entre el icono y el texto */
+            }
+        }
+    }
+
+    .select-css{
+        gap: .5rem;
+        width: 500px; 
+        border: 2px solid #ccc; 
+        border-radius: 14px; 
+        padding: 1rem; 
+        font-size: 16px; 
+        background-color: var(--inputColor); 
+
+        select option {
+            font-size: 16px; /* Tamaño de fuente de las opciones */
+            background: var(--inputColor);
+        }
+    }
+    
+
+    .btn{
+        padding: .8rem;
+        background: var(--colorBlue);
+        border-radius: 10px;
+        color: var(--whiteColor);
+        align-items: center;
+        margin: 30px auto;
+        justify-content: center;
+        font-size: 16px;
+        width: 50%;
+        gap: .5rem;
+        transition: .3s ease;
+        display: flex;
+        flex-direction: row; /* Alinea los elementos flexibles en una fila */
+        margin-top: 2rem;
+        gap: 2rem;
+
+        .icon{
+            font-size: 50px;
+            transition: .3s ease;
+        }
+
+        &:hover{
+            background: var(--colorRed);
+            color: var(--whiteColor);
+
+            .icon{
+                color: var(--blackColor);
+                transform: translateX(5px);
+            }
+        }
+    }
+
+    .bottom flex{
+        margin-top: 2rem;
+        gap: 2rem;
+        
+    }
+}
+
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 918px) {
+    .bottom{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 918px) {
+    .heading{
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .heading{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
