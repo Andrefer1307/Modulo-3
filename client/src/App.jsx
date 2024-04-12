@@ -20,6 +20,8 @@ import ThirteenthPage from './components/dashboard/src/Components/Formulario/Thi
 import FourteenPage from './components/dashboard/src/Components/Formulario/FourteenPage'
 import FiveteenPage from  './components/dashboard/src/Components/Formulario/FiveteenPage'
 import Olvido from './components/Login/Olvido'
+import DetailsPage from './components/dashboard/src/Components/Body Section/Registros/MisRegistros'
+import EditPage from './components/dashboard/src/Components/Body Section/Registros/EdithPage'
 
 //Crear rutas
 const router = createBrowserRouter([
@@ -102,7 +104,16 @@ const router = createBrowserRouter([
   {
     path:'/resetpass',
     element: <div><Olvido/></div>
-  }
+  },
+  {
+    path:'/misregistros',
+    element: <div><DetailsPage/></div>
+  },
+  {
+    path:'/misregistros-edit/:id',
+    element: <div><EditPage/></div>
+  },
+
 ])
 
 function App() {
